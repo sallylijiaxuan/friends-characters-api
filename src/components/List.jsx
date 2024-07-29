@@ -18,9 +18,9 @@ export default function List() {
         async function fetchData() {
             const data = await fetch('https://sallylijiaxuan.github.io/mp4/db.json');
 
-            const { drinks } = await data.json();
+            const { character } = await data.json();
 
-            setCharacters(drinks);
+            setCharacters(character);
             setLoading(false);
         }
 
@@ -34,13 +34,18 @@ export default function List() {
             ) : (
                 characters.map((character) => (
                     <Character
-                        key={character.idDrink}
-                        name={character.strDrink}
-                        instruction={character.strInstructions}
-                        glass={character.strGlass}
+                        key={character.id}
+                        first name={character.first_name}
+                        last_name={character.last_name}
+                        gender={character.gender}
+                        birthday={character.birthday}
+                        occupation={character.occupation}
+                        father={character.father}
+                        mother={character.mother}
+                        protrayed_by={character.portrayed_by}
                     />
                 ))
-            )}
+                )}
         </PageWrapper>
     );
 }

@@ -15,16 +15,26 @@ const StyledDiv=  styled.div`
 export default function Character(props) {
     return (
         <StyledDiv key={props.id}>
-            <h3>{props.first name}</h3>
-            <p>{props.instruction}</p>
-            <p>{props.glass}</p>
+            <p>{props.first_name}</p>
+            <p>{props.last_name}</p>
+            <p>{props.gender}</p>
+            <p>{props.birthday}</p>
+            <p>{props.occupation}</p>
+            <p>{props.father}</p>
+            <p>{props.mother}</p>
+            <p>{props.portrayed_by}</p>
         </StyledDiv>
     );
 }
 
 Character.propTypes = {
-    key: PropTypes.string,
-    name: PropTypes.string,
-    instruction: PropTypes.string,
-    glass: PropTypes.string,
+    id: PropTypes.string,
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    gender: PropTypes.string,
+    birthday: PropTypes.string,
+    occupation: PropTypes.string,
+    father: PropTypes.string,
+    mother: PropTypes.string,
+    portrayed_by: PropTypes.string,
 }
