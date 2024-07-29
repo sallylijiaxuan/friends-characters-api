@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {styled} from "styled-components";
+import styled from "styled-components";
 
 const StyledDiv=  styled.div`
     display: flex;
@@ -14,8 +14,8 @@ const StyledDiv=  styled.div`
 
 export default function Character(props) {
     return (
-        <StyledDiv key={props.key}>
-            <h3>{props.name}</h3>
+        <StyledDiv key={props.id}>
+            <h3>{props.first name}</h3>
             <p>{props.instruction}</p>
             <p>{props.glass}</p>
         </StyledDiv>
