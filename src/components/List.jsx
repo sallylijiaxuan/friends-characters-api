@@ -18,9 +18,9 @@ export default function List() {
         async function fetchData() {
             const data = await fetch('https://sallylijiaxuan.github.io/mp4/db.json');
 
-            const { character } = await data.json();
+            const { characters } = await data.json();
 
-            setCharacters(character);
+            setCharacters(characters);
             setLoading(false);
         }
 
@@ -32,16 +32,16 @@ export default function List() {
             {loading ? (
                 <div>Loading...</div>
             ) : (
-                characters.map((character) => (
+                characters.map((characters) => (
                     <Character
-                        key={character.id}
-                        first name={character.first_name}
-                        last_name={character.last_name}
-                        gender={character.gender}
-                        occupation={character.occupation}
-                        father={character.father}
-                        mother={character.mother}
-                        protrayed_by={character.portrayed_by}
+                        key={characters.id}
+                        first name={characters.first_name}
+                        last_name={characters.last_name}
+                        gender={characters.gender}
+                        occupation={characters.occupation}
+                        father={characters.father}
+                        mother={characters.mother}
+                        protrayed_by={characters.portrayed_by}
                     />
                 ))
                 )}
