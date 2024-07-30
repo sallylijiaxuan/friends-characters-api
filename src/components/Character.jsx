@@ -18,7 +18,6 @@ export default function Character(props) {
             <p>{props.first_name}</p>
             <p>{props.last_name}</p>
             <p>{props.gender}</p>
-            <p>{props.birthday}</p>
             <p>{props.occupation}</p>
             <p>{props.father}</p>
             <p>{props.mother}</p>
@@ -32,7 +31,6 @@ Character.propTypes = {
     first_name: PropTypes.string,
     last_name: PropTypes.string,
     gender: PropTypes.string,
-    birthday: PropTypes.string,
     occupation: PropTypes.string,
     father: PropTypes.string,
     mother: PropTypes.string,

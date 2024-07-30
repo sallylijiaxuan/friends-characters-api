@@ -38,7 +38,6 @@ export default function List() {
                         first name={character.first_name}
                         last_name={character.last_name}
                         gender={character.gender}
-                        birthday={character.birthday}
                         occupation={character.occupation}
                         father={character.father}
                         mother={character.mother}
