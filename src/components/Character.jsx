@@ -1,38 +1,51 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const StyledDiv=  styled.div`
+const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: #AA7DCE;
     width: 40%;
     margin: 1% 0;
     padding: 2%;
 `;
 
+const StyledTitle = styled.div`
+    background-color: mediumpurple;
+    width: 100%;
+`
+
+const StyledP = styled.p`
+    font-size: calc(2px + 2vh);
+    font-weight: bold;
+    color: #FFE787;
+`
+
 export default function Character(props) {
     return (
-        <StyledDiv key={props.id}>
-            <p>{props.first_name}</p>
-            <p>{props.last_name}</p>
-            <p>{props.gender}</p>
-            <p>{props.occupation}</p>
-            <p>{props.father}</p>
-            <p>{props.mother}</p>
-            <p>{props.portrayed_by}</p>
+        <StyledDiv key={props.key}>
+            <StyledTitle>
+                <StyledP>{props.firstName}</StyledP>
+                <StyledP>{props.lastName}</StyledP>
+            </StyledTitle>
+            <StyledP>Gender: {props.gender}</StyledP>
+            <StyledP>Occupation: {props.occupation}</StyledP>
+            <StyledP>Father: {props.father}</StyledP>
+            <StyledP>Mother: {props.mother}</StyledP>
+            <StyledP>Portrayed by: {props.portrayedBy}</StyledP>
         </StyledDiv>
     );
 }
 
 Character.propTypes = {
-    id: PropTypes.string,
-    first_name: PropTypes.string,
-    last_name: PropTypes.string,
+    key: PropTypes.string,
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
     gender: PropTypes.string,
     occupation: PropTypes.string,
     father: PropTypes.string,
     mother: PropTypes.string,
-    portrayed_by: PropTypes.string,
+    portrayedBy: PropTypes.string,
 }

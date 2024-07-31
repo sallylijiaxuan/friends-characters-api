@@ -35,16 +35,16 @@ export default function List() {
                 characters.map((characters) => (
                     <Character
                         key={characters.id}
-                        first name={characters.first_name}
-                        last_name={characters.last_name}
+                        firstName={characters.first_name}
+                        lastName={characters.last_name}
                         gender={characters.gender}
                         occupation={characters.occupation}
                         father={characters.father}
                         mother={characters.mother}
-                        protrayed_by={characters.portrayed_by}
+                        portrayedBy={characters.portrayed_by}
                     />
                 ))
-                )}
+            )}
         </PageWrapper>
     );
 }
