@@ -1,3 +1,7 @@
+# README
+
+This project is a web app about the *Friends* characters, based on a self-made API: https://sallylijiaxuan.github.io/friends-characters-api/db.json
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
