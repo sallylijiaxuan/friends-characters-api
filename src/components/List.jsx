@@ -16,7 +16,7 @@ export default function List() {
 
     useEffect(() => {
         async function fetchData() {
-            const data = await fetch('https://sallylijiaxuan.github.io/mp4/db.json');
+            const data = await fetch('https://sallylijiaxuan.github.io/friends-characters-api/db.json');
 
             const { characters } = await data.json();
 
